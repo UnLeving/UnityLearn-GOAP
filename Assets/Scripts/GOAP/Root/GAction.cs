@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Helpers.TagSelector;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -7,7 +8,8 @@ public abstract class GAction : MonoBehaviour
     public string actionName = "Action";
     public float cost = 1f;
     public GameObject target;
-    public string targetTag;
+    
+   [TagSelector] public string targetTag;
     public float duration = 0f;
     public WorldState[] preConditions;
     public WorldState[] afterEffects;

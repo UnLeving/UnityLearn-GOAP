@@ -56,7 +56,6 @@ public class GAgent : MonoBehaviour
     {
         if (currentAction != null && currentAction.running)
         {
-            //var distance = Vector3.Distance(currentAction.target.transform.position, transform.position);
             if (!currentAction.agent.hasPath || !(currentAction.agent.remainingDistance < 1f)) return;
 
             if (invoked) return;
@@ -105,7 +104,7 @@ public class GAgent : MonoBehaviour
 
             if (currentAction.PrePerform())
             {
-                if (currentAction.target == null && currentAction.targetTag != "")
+                if (currentAction.target == null && currentAction.targetTag != string.Empty)
                 {
                     currentAction.target = GameObject.FindWithTag(currentAction.targetTag);
                 }
