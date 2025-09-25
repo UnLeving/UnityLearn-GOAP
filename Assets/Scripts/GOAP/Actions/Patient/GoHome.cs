@@ -7,6 +7,8 @@ public class GoHome : GAction
 
     public override bool PostPerform()
     {
+        Destroy(gameObject);
+        
         return true;
     }
 }
