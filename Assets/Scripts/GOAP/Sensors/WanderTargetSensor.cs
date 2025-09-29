@@ -10,7 +10,7 @@ namespace GOAP
     {
         public override ISensorTimer Timer { get; } = SensorTimer.Interval(1);
 
-        private static readonly Vector2 Bounds = new Vector2(15, 8);
+        private static readonly Vector2 Bounds = new Vector2(50, 8);
         
         int counter = 0;
         

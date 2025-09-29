@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875fbfa2d1734285b353878b31467c98, type: 3}
+  m_Name: Resting Capability Config Scriptable
+  m_EditorClassIdentifier: 
+  goals:
+  - goal:
+      <Name>k__BackingField: FixTiredGoal
+      <Id>k__BackingField: FixTired-f9e4c6d6-7b59-46d6-a150-413d18502fbb
+    baseCost: 1
+    conditions:
+    - worldKey:
+        <Name>k__BackingField: IsTiredWorldKey
+        <Id>k__BackingField: IsTiredWorldKey-3ea22ca7-c120-407d-9d77-7b7094a04ce5
+      comparison: 1
+      amount: 0
+  actions:
+  - action:
+      <Name>k__BackingField: RestingAction
+      <Id>k__BackingField: Resting-34d41cdf-a8d1-40ca-9f78-0342ce11a363
+    target:
+      <Name>k__BackingField: 
+      <Id>k__BackingField: 
+    properties:
+      rid: 909068090202915004
+    baseCost: 1
+    stoppingDistance: 0.1
+    validateTarget: 1
+    requiresTarget: 0
+    validateConditions: 1
+    moveMode: 0
+    conditions:
+    - worldKey:
+        <Name>k__BackingField: IsAtRestRoomWorldKey
+        <Id>k__BackingField: IsAtRestRoomWorldKey-01c8961c-06e3-401f-b945-38ba06ddf585
+      comparison: 3
+      amount: 1
+    effects:
+    - worldKey:
+        <Name>k__BackingField: IsTiredWorldKey
+        <Id>k__BackingField: IsTiredWorldKey-3ea22ca7-c120-407d-9d77-7b7094a04ce5
+      effect: 0
+  - action:
+      <Name>k__BackingField: GoToRestroomAction
+      <Id>k__BackingField: GoToRestroom-d91a1031-05cd-4847-90c0-88d8e80daec8
+    target:
+      <Name>k__BackingField: RestRoomTargetKey
+      <Id>k__BackingField: RestRoomTargetKey-14a3650d-7308-4bbe-bda0-8dc490ddfe87
+    properties:
+      rid: 909068090202915005
+    baseCost: 1
+    stoppingDistance: 0.1
+    validateTarget: 1
+    requiresTarget: 1
+    validateConditions: 1
+    moveMode: 0
+    conditions: []
+    effects:
+    - worldKey:
+        <Name>k__BackingField: IsAtRestRoomWorldKey
+        <Id>k__BackingField: IsAtRestRoomWorldKey-01c8961c-06e3-401f-b945-38ba06ddf585
+      effect: 1
+  worldSensors:
+  - sensor:
+      <Name>k__BackingField: RestingWorldSensor
+      <Id>k__BackingField: RestingWorldSensor
+    worldKey:
+      <Name>k__BackingField: IsTiredWorldKey
+      <Id>k__BackingField: IsTiredWorldKey-3ea22ca7-c120-407d-9d77-7b7094a04ce5
+  - sensor:
+      <Name>k__BackingField: AtRestroomWorldSensor
+      <Id>k__BackingField: AtRestroomWorldSensor
+    worldKey:
+      <Name>k__BackingField: IsAtRestRoomWorldKey
+      <Id>k__BackingField: IsAtRestRoomWorldKey-01c8961c-06e3-401f-b945-38ba06ddf585
+  targetSensors:
+  - sensor:
+      <Name>k__BackingField: RestroomTargetSensor
+      <Id>k__BackingField: RestroomTargetSensor
+    targetKey:
+      <Name>k__BackingField: RestRoomTargetKey
+      <Id>k__BackingField: RestRoomTargetKey-14a3650d-7308-4bbe-bda0-8dc490ddfe87
+  multiSensors: []
+  generatorScriptable: {fileID: 11400000, guid: e427c52e6a18f054496544edaa9da965, type: 2}
+  references:
+    version: 2
+    RefIds:
+    - rid: 909068090202915004
+      type: {class: EmptyActionProperties, ns: CrashKonijn.Agent.Runtime, asm: CrashKonijn.Agent.Runtime}
+      data: 
+    - rid: 909068090202915005
+      type: {class: EmptyActionProperties, ns: CrashKonijn.Agent.Runtime, asm: CrashKonijn.Agent.Runtime}
+      data: 

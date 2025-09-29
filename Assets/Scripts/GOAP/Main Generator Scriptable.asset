@@ -15,19 +15,54 @@ MonoBehaviour:
   nameSpace: GOAP
   scripts:
     goals:
+    - <Name>k__BackingField: FixTiredGoal
+      fullName: GOAP.FixTiredGoal, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/Goals/FixTiredGoal.cs
+      <Id>k__BackingField: FixTired-f9e4c6d6-7b59-46d6-a150-413d18502fbb
     - <Name>k__BackingField: WanderGoal
       fullName: GOAP.WanderGoal, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       <Path>k__BackingField: Assets/Scripts/GOAP/Goals/WanderGoal.cs
       <Id>k__BackingField: Wander-df07b15f-a4be-4983-a124-5e167476e3d7
     actions:
+    - <Name>k__BackingField: GoToRestroomAction
+      fullName: GOAP.GoToRestroomAction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/Actions/GoToRestroomAction.cs
+      <Id>k__BackingField: GoToRestroom-d91a1031-05cd-4847-90c0-88d8e80daec8
+    - <Name>k__BackingField: RestingAction
+      fullName: GOAP.RestingAction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/Actions/RestingAction.cs
+      <Id>k__BackingField: Resting-34d41cdf-a8d1-40ca-9f78-0342ce11a363
     - <Name>k__BackingField: WanderAction
       fullName: GOAP.WanderAction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       <Path>k__BackingField: Assets/Scripts/GOAP/Actions/WanderAction.cs
       <Id>k__BackingField: Wander-f803d09f-39b1-4ef8-b710-56b0770cc27f
-    worldSensors: []
+    worldSensors:
+    - <Name>k__BackingField: AtRestroomWorldSensor
+      fullName: GOAP.AtRestroomWorldSensor, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/Sensors/AtRestroomWorldSensor.cs
+      <Id>k__BackingField: AtRestroomWorldSensor
+    - <Name>k__BackingField: RestingWorldSensor
+      fullName: GOAP.RestingWorldSensor, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/Sensors/RestingWorldSensor.cs
+      <Id>k__BackingField: RestingWorldSensor
     worldKeys:
+    - <Name>k__BackingField: IsAtRestRoomWorldKey
+      fullName: GOAP.IsAtRestRoomWorldKey, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/WorldKeys/IsAtRestRoomWorldKey.cs
+      <Id>k__BackingField: IsAtRestRoomWorldKey-01c8961c-06e3-401f-b945-38ba06ddf585
+    - <Name>k__BackingField: IsTiredWorldKey
+      fullName: GOAP.IsTiredWorldKey, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/WorldKeys/IsTiredWorldKey.cs
+      <Id>k__BackingField: IsTiredWorldKey-3ea22ca7-c120-407d-9d77-7b7094a04ce5
     - <Name>k__BackingField: WanderWorldKey
       fullName: GOAP.WanderWorldKey, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -39,6 +74,11 @@ MonoBehaviour:
         PublicKeyToken=null
       <Path>k__BackingField: Assets/Scripts/GOAP/Sensors/AgentSensor.cs
       <Id>k__BackingField: Simple-TransformSensor
+    - <Name>k__BackingField: RestroomTargetSensor
+      fullName: GOAP.RestroomTargetSensor, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/Sensors/RestroomTargetSensor.cs
+      <Id>k__BackingField: RestroomTargetSensor
     - <Name>k__BackingField: WanderTargetSensor
       fullName: GOAP.WanderTargetSensor, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -50,6 +90,11 @@ MonoBehaviour:
         PublicKeyToken=null
       <Path>k__BackingField: Assets/Scripts/GOAP/TargetKeys/AgentTarget.cs
       <Id>k__BackingField: AgentTarget-425903d7-8429-4cb6-b3ce-76d1a541a2b6
+    - <Name>k__BackingField: RestRoomTargetKey
+      fullName: GOAP.RestRoomTargetKey, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/TargetKeys/RestRoomTargetKey.cs
+      <Id>k__BackingField: RestRoomTargetKey-14a3650d-7308-4bbe-bda0-8dc490ddfe87
     - <Name>k__BackingField: WanderTargetKey
       fullName: GOAP.WanderTargetKey, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
