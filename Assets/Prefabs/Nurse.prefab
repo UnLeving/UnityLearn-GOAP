@@ -1080,10 +1080,6 @@ GameObject:
   m_Component:
   - component: {fileID: 177407082141715887}
   - component: {fileID: 5330693530246384018}
-  - component: {fileID: -7539907401391804109}
-  - component: {fileID: 5005275227520206741}
-  - component: {fileID: 2734844662761323542}
-  - component: {fileID: -451738989598370646}
   m_Layer: 0
   m_Name: Nurse
   m_TagString: Untagged
@@ -1129,95 +1125,6 @@ NavMeshAgent:
   m_BaseOffset: 0.93
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &-7539907401391804109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2618188073631541129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7b64c60f5284778a300c78138173705, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actions: []
-  currentAction: {fileID: 0}
---- !u!114 &5005275227520206741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2618188073631541129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c73ba18670b6426cb6f61e2a0bb73bcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actionName: GetPatient
-  cost: 1
-  target: {fileID: 0}
-  targetTag: 
-  duration: 0
-  preConditions:
-  - key: waiting
-    value: 0
-  afterEffects:
-  - key: patientPickedup
-    value: 0
-  agent: {fileID: 0}
-  running: 0
---- !u!114 &2734844662761323542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2618188073631541129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99169d3736c24e46891440c0b700ecf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actionName: Action
-  cost: 1
-  target: {fileID: 0}
-  targetTag: 
-  duration: 0
-  preConditions:
-  - key: patientPickedup
-    value: 0
-  afterEffects:
-  - key: treatPatient
-    value: 0
-  agent: {fileID: 0}
-  running: 0
---- !u!114 &-451738989598370646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2618188073631541129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d952d29465e54c0a8ff0bcc102f8eb4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actionName: Rest
-  cost: 1
-  target: {fileID: 0}
-  targetTag: Lounge
-  duration: 5
-  preConditions:
-  - key: exhausted
-    value: 0
-  afterEffects:
-  - key: rested
-    value: 0
-  agent: {fileID: 0}
-  running: 0
 --- !u!1 &2629889911763255196
 GameObject:
   m_ObjectHideFlags: 0
