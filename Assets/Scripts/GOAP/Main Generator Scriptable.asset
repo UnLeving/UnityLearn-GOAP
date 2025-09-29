@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0857b2a53377458ebec6c4b1179e3c5a, type: 3}
+  m_Name: Main Generator Scriptable
+  m_EditorClassIdentifier: 
+  nameSpace: GOAP
+  scripts:
+    goals:
+    - <Name>k__BackingField: WanderGoal
+      fullName: GOAP.WanderGoal, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/Goals/WanderGoal.cs
+      <Id>k__BackingField: Wander-df07b15f-a4be-4983-a124-5e167476e3d7
+    actions:
+    - <Name>k__BackingField: WanderAction
+      fullName: GOAP.WanderAction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/Actions/WanderAction.cs
+      <Id>k__BackingField: Wander-f803d09f-39b1-4ef8-b710-56b0770cc27f
+    worldSensors: []
+    worldKeys:
+    - <Name>k__BackingField: WanderWorldKey
+      fullName: GOAP.WanderWorldKey, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/WorldKeys/WanderWorldKey.cs
+      <Id>k__BackingField: WanderWorldKey-41863b58-f7ad-4283-a3dc-e2141d8c85a8
+    targetSensors:
+    - <Name>k__BackingField: AgentSensor
+      fullName: GOAP.AgentSensor, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/Sensors/AgentSensor.cs
+      <Id>k__BackingField: Simple-TransformSensor
+    - <Name>k__BackingField: WanderTargetSensor
+      fullName: GOAP.WanderTargetSensor, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/Sensors/WanderTargetSensor.cs
+      <Id>k__BackingField: WanderTargetSensor
+    targetKeys:
+    - <Name>k__BackingField: AgentTarget
+      fullName: GOAP.AgentTarget, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/TargetKeys/AgentTarget.cs
+      <Id>k__BackingField: AgentTarget-425903d7-8429-4cb6-b3ce-76d1a541a2b6
+    - <Name>k__BackingField: WanderTargetKey
+      fullName: GOAP.WanderTargetKey, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/TargetKeys/WanderTargetKey.cs
+      <Id>k__BackingField: WanderTargetKey-3bbaa7e5-f257-4fe2-b379-76ef6ef59d42
+    multiSensors: []
