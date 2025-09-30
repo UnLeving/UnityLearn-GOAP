@@ -26,6 +26,10 @@ namespace GOAP
         {
             var random = this.GetRandomPosition(agent);
             
+            // If we already have a target, update it with the new position
+            if (existingTarget is PositionTarget positionTarget)
+                return positionTarget.SetPosition(random);
+            
             return new PositionTarget(random);
         }
         
