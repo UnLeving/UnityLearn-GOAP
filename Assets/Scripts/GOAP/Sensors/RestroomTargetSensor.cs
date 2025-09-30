@@ -41,22 +41,20 @@ namespace GOAP
         private Vector3 GetRandomPointInCollider()
         {
             if (restroomCollider == null)
-            {
-                Debug.LogError("No collider found on the restroom!");
-                
                 return restroomTransform.position;
-            }
 
-            Vector3 center = restroomCollider.bounds.center;
-            Vector3 size = restroomCollider.bounds.size;
+            Vector3 localCenter = restroomCollider.center;
+            Vector3 size = restroomCollider.size;
 
-            Vector3 randomPoint = new Vector3(
-                Random.Range(center.x - size.x * 0.5f, center.x + size.x * 0.5f),
-                0f,
-                Random.Range(center.z - size.z * 0.5f, center.z + size.z * 0.5f)
+            Vector3 localRandomPoint = new Vector3(
+                localCenter.x + Random.Range(-size.x * 0.5f, size.x * 0.5f),
+                localCenter.y,
+                localCenter.z + Random.Range(-size.z * 0.5f, size.z * 0.5f)
             );
 
-            return randomPoint;
+            Vector3 worldPoint = restroomTransform.TransformPoint(localRandomPoint);
+            
+            return worldPoint;
         }
     }
 }

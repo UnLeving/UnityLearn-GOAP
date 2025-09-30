@@ -12,7 +12,7 @@ namespace GOAP
         
         public override void Created()
         {
-            //restroomTransform = GameObject.FindGameObjectWithTag("Lounge").transform;
+            
         }
 
         public override void Update()
