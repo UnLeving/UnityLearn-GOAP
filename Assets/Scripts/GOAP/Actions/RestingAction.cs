@@ -56,6 +56,7 @@ namespace GOAP
         // This method is optional and can be removed
         public override void Complete(IMonoAgent agent, Data data)
         {
+            data.TiredBehaviour.AtRestroom = false;
         }
 
         // This method is called when the action is stopped

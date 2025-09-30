@@ -73,7 +73,7 @@ MonoBehaviour:
       fullName: GOAP.AgentSensor, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       <Path>k__BackingField: Assets/Scripts/GOAP/Sensors/AgentSensor.cs
-      <Id>k__BackingField: Simple-TransformSensor
+      <Id>k__BackingField: AgentSensor
     - <Name>k__BackingField: RestroomTargetSensor
       fullName: GOAP.RestroomTargetSensor, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null

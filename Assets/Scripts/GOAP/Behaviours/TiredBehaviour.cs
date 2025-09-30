@@ -6,6 +6,7 @@ public class TiredBehaviour : MonoBehaviour
     private GoapActionProvider actionProvider;
     public float value = 50;
     public bool IsTired => this.value >= 100;
+    public bool AtRestroom;
     
     private void Awake()
     {

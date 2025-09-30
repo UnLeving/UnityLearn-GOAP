@@ -12,18 +12,20 @@ namespace GOAP
         
         public override void Created()
         {
-            restroomTransform = GameObject.FindGameObjectWithTag("Lounge").transform;
+            //restroomTransform = GameObject.FindGameObjectWithTag("Lounge").transform;
         }
 
         public override void Update()
         {
         }
-
+        
         public override SenseValue Sense(IActionReceiver agent, IComponentReference references)
         {
-            var flag = Vector3.Distance(agent.Transform.position, restroomTransform.position) < 2f;
+            var restroomBeh = references.GetCachedComponent<TiredBehaviour>();
             
-            return flag;
+            if (restroomBeh == null) return false;
+            
+            return new SenseValue(restroomBeh.AtRestroom);
         }
     }
 }

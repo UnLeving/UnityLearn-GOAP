@@ -1,4 +1,5 @@
 using CrashKonijn.Agent.Core;
+using CrashKonijn.Agent.Runtime;
 using CrashKonijn.Goap.Runtime;
 using UnityEngine;
 
@@ -37,6 +38,10 @@ namespace GOAP
         // This method is required
         public override IActionRunState Perform(IMonoAgent agent, Data data, IActionContext context)
         {
+            Debug.Log("Going to restroom.Perform");
+            
+            data.TiredBehaviour.AtRestroom = true;
+            
             return ActionRunState.Completed;
         }
 
@@ -63,6 +68,8 @@ namespace GOAP
         public class Data : IActionData
         {
             public ITarget Target { get; set; }
+            [GetComponent]
+            public TiredBehaviour TiredBehaviour { get; set; }
         }
     }
 }

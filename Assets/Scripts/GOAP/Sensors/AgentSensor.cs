@@ -4,7 +4,7 @@ using CrashKonijn.Goap.Runtime;
 
 namespace GOAP
 {
-    [GoapId("Simple-TransformSensor")]
+    [GoapId("AgentSensor")]
     public class AgentSensor : LocalTargetSensorBase
     {
         public override ISensorTimer Timer { get; } = SensorTimer.Once;
