@@ -40,6 +40,11 @@ namespace GOAP
         // This method is required
         public override IActionRunState Perform(IMonoAgent agent, Data data, IActionContext context)
         {
+            if (data.WaitState.IsRunning())
+            {
+                return data.WaitState;
+            }
+            
             return ActionRunState.Completed;
         }
 
