@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875fbfa2d1734285b353878b31467c98, type: 3}
+  m_Name: Patient Capability Config Scriptable
+  m_EditorClassIdentifier: 
+  goals:
+  - goal:
+      <Name>k__BackingField: GetCuredGoal
+      <Id>k__BackingField: GetCured-77185614-1603-4815-96e4-84c837d0a4f1
+    baseCost: 1
+    conditions:
+    - worldKey:
+        <Name>k__BackingField: IsRegisteredWorldKey
+        <Id>k__BackingField: IsRegisteredWorldKey-a93c318d-29cd-4d3f-97c6-3c178d72e1e8
+      comparison: 2
+      amount: 0
+  actions:
+  - action:
+      <Name>k__BackingField: RegisterAction
+      <Id>k__BackingField: RegisterAction
+    target:
+      <Name>k__BackingField: RegistrationDeskTargetKey
+      <Id>k__BackingField: RegistrationDeskTargetKey-e74180e3-87bb-479d-ad5a-78f5f363d5eb
+    properties:
+      rid: 3157395010737405993
+    baseCost: 1
+    stoppingDistance: 0.1
+    validateTarget: 1
+    requiresTarget: 1
+    validateConditions: 1
+    moveMode: 0
+    conditions: []
+    effects:
+    - worldKey:
+        <Name>k__BackingField: IsRegisteredWorldKey
+        <Id>k__BackingField: IsRegisteredWorldKey-a93c318d-29cd-4d3f-97c6-3c178d72e1e8
+      effect: 1
+  worldSensors:
+  - sensor:
+      <Name>k__BackingField: RegisteringWorldSensor
+      <Id>k__BackingField: RegisteringWorldSensor
+    worldKey:
+      <Name>k__BackingField: IsRegisteredWorldKey
+      <Id>k__BackingField: IsRegisteredWorldKey-a93c318d-29cd-4d3f-97c6-3c178d72e1e8
+  targetSensors:
+  - sensor:
+      <Name>k__BackingField: RegistrationZoneSensor
+      <Id>k__BackingField: RegistrationZoneSensor
+    targetKey:
+      <Name>k__BackingField: RegistrationDeskTargetKey
+      <Id>k__BackingField: RegistrationDeskTargetKey-e74180e3-87bb-479d-ad5a-78f5f363d5eb
+  multiSensors: []
+  generatorScriptable: {fileID: 11400000, guid: e427c52e6a18f054496544edaa9da965, type: 2}
+  references:
+    version: 2
+    RefIds:
+    - rid: 3157395010737405993
+      type: {class: RegisterAction/Props, ns: GOAP, asm: Assembly-CSharp}
+      data:
+        timer: 3
