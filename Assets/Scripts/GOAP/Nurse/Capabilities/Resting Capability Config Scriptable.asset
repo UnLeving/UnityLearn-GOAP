@@ -28,35 +28,10 @@ MonoBehaviour:
       <Name>k__BackingField: RestingAction
       <Id>k__BackingField: Resting-34d41cdf-a8d1-40ca-9f78-0342ce11a363
     target:
-      <Name>k__BackingField: 
-      <Id>k__BackingField: 
-    properties:
-      rid: 909068090202915004
-    baseCost: 1
-    stoppingDistance: 0.1
-    validateTarget: 1
-    requiresTarget: 0
-    validateConditions: 1
-    moveMode: 0
-    conditions:
-    - worldKey:
-        <Name>k__BackingField: IsAtRestRoomWorldKey
-        <Id>k__BackingField: IsAtRestRoomWorldKey-01c8961c-06e3-401f-b945-38ba06ddf585
-      comparison: 3
-      amount: 1
-    effects:
-    - worldKey:
-        <Name>k__BackingField: IsTiredWorldKey
-        <Id>k__BackingField: IsTiredWorldKey-3ea22ca7-c120-407d-9d77-7b7094a04ce5
-      effect: 0
-  - action:
-      <Name>k__BackingField: GoToRestroomAction
-      <Id>k__BackingField: GoToRestroom-d91a1031-05cd-4847-90c0-88d8e80daec8
-    target:
       <Name>k__BackingField: RestRoomTargetKey
       <Id>k__BackingField: RestRoomTargetKey-14a3650d-7308-4bbe-bda0-8dc490ddfe87
     properties:
-      rid: 909068090202915005
+      rid: 909068090202915004
     baseCost: 1
     stoppingDistance: 0.1
     validateTarget: 1
@@ -66,9 +41,9 @@ MonoBehaviour:
     conditions: []
     effects:
     - worldKey:
-        <Name>k__BackingField: IsAtRestRoomWorldKey
-        <Id>k__BackingField: IsAtRestRoomWorldKey-01c8961c-06e3-401f-b945-38ba06ddf585
-      effect: 1
+        <Name>k__BackingField: IsTiredWorldKey
+        <Id>k__BackingField: IsTiredWorldKey-3ea22ca7-c120-407d-9d77-7b7094a04ce5
+      effect: 0
   worldSensors:
   - sensor:
       <Name>k__BackingField: RestingWorldSensor
@@ -95,8 +70,5 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 909068090202915004
-      type: {class: EmptyActionProperties, ns: CrashKonijn.Agent.Runtime, asm: CrashKonijn.Agent.Runtime}
-      data: 
-    - rid: 909068090202915005
       type: {class: EmptyActionProperties, ns: CrashKonijn.Agent.Runtime, asm: CrashKonijn.Agent.Runtime}
       data: 
