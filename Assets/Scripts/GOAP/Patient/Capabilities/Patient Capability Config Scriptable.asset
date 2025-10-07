@@ -19,8 +19,8 @@ MonoBehaviour:
     baseCost: 1
     conditions:
     - worldKey:
-        <Name>k__BackingField: IsRegisteredWorldKey
-        <Id>k__BackingField: IsRegisteredWorldKey-a93c318d-29cd-4d3f-97c6-3c178d72e1e8
+        <Name>k__BackingField: InWaitingRoomWorldKey
+        <Id>k__BackingField: InWaitingRoomWorldKey-0b87712f-739f-437a-93a2-771a31af03dd
       comparison: 2
       amount: 0
   actions:
@@ -44,13 +44,44 @@ MonoBehaviour:
         <Name>k__BackingField: IsRegisteredWorldKey
         <Id>k__BackingField: IsRegisteredWorldKey-a93c318d-29cd-4d3f-97c6-3c178d72e1e8
       effect: 1
+  - action:
+      <Name>k__BackingField: WaitingRoomAction
+      <Id>k__BackingField: WaitingRoomAction
+    target:
+      <Name>k__BackingField: WaitingRoomTargetKey
+      <Id>k__BackingField: WaitingRoomTargetKey-127d031a-69dd-4b27-8023-1fa8f2687a2e
+    properties:
+      rid: 3157395124789969083
+    baseCost: 1
+    stoppingDistance: 1
+    validateTarget: 1
+    requiresTarget: 1
+    validateConditions: 1
+    moveMode: 0
+    conditions:
+    - worldKey:
+        <Name>k__BackingField: IsRegisteredWorldKey
+        <Id>k__BackingField: IsRegisteredWorldKey-a93c318d-29cd-4d3f-97c6-3c178d72e1e8
+      comparison: 2
+      amount: 0
+    effects:
+    - worldKey:
+        <Name>k__BackingField: InWaitingRoomWorldKey
+        <Id>k__BackingField: InWaitingRoomWorldKey-0b87712f-739f-437a-93a2-771a31af03dd
+      effect: 1
   worldSensors:
   - sensor:
       <Name>k__BackingField: RegisteringWorldSensor
-      <Id>k__BackingField: RegisteringWorldSensor
+      <Id>k__BackingField: 
     worldKey:
       <Name>k__BackingField: IsRegisteredWorldKey
-      <Id>k__BackingField: IsRegisteredWorldKey-a93c318d-29cd-4d3f-97c6-3c178d72e1e8
+      <Id>k__BackingField: 
+  - sensor:
+      <Name>k__BackingField: WaitingNurseWorldSensor
+      <Id>k__BackingField: WaitingNurseWorldSensor
+    worldKey:
+      <Name>k__BackingField: InWaitingRoomWorldKey
+      <Id>k__BackingField: InWaitingRoomWorldKey-0b87712f-739f-437a-93a2-771a31af03dd
   targetSensors:
   - sensor:
       <Name>k__BackingField: RegistrationZoneSensor
@@ -58,6 +89,12 @@ MonoBehaviour:
     targetKey:
       <Name>k__BackingField: RegistrationDeskTargetKey
       <Id>k__BackingField: RegistrationDeskTargetKey-e74180e3-87bb-479d-ad5a-78f5f363d5eb
+  - sensor:
+      <Name>k__BackingField: WaitingRoomLocalTargetSensor
+      <Id>k__BackingField: WaitingRoomLocalTargetSensor
+    targetKey:
+      <Name>k__BackingField: WaitingRoomTargetKey
+      <Id>k__BackingField: WaitingRoomTargetKey-127d031a-69dd-4b27-8023-1fa8f2687a2e
   multiSensors: []
   generatorScriptable: {fileID: 11400000, guid: e427c52e6a18f054496544edaa9da965, type: 2}
   references:
@@ -67,3 +104,6 @@ MonoBehaviour:
       type: {class: RegisterAction/Props, ns: GOAP, asm: Assembly-CSharp}
       data:
         timer: 3
+    - rid: 3157395124789969083
+      type: {class: EmptyActionProperties, ns: CrashKonijn.Agent.Runtime, asm: CrashKonijn.Agent.Runtime}
+      data: 
