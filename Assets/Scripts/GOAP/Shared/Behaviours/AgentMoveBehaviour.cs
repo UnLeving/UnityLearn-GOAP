@@ -6,9 +6,13 @@ namespace GOAP
 {
     public class AgentMoveBehaviour : MonoBehaviour
     {
+        [SerializeField] private HumanConfigSO humanConfigSo;
+        
+        
         private AgentBehaviour agent;
         private ITarget currentTarget;
         private bool shouldMove;
+        private float speed => humanConfigSo.moveSpeed;
 
         private void Awake()
         {
@@ -65,7 +69,7 @@ namespace GOAP
                 return;
 
             this.transform.position = 
-                Vector3.MoveTowards(this.transform.position, new Vector3(this.currentTarget.Position.x, this.transform.position.y, this.currentTarget.Position.z), Time.deltaTime);
+                Vector3.MoveTowards(this.transform.position, new Vector3(this.currentTarget.Position.x, this.transform.position.y, this.currentTarget.Position.z), speed * Time.deltaTime);
         }
 
         private void OnDrawGizmos()
