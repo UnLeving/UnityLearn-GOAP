@@ -4,7 +4,7 @@ using CrashKonijn.Goap.Runtime;
 using GOAP;
 using UnityEngine;
 
-public class AgentBrain : MonoBehaviour
+public class NurseBrain : MonoBehaviour
 {
     private GoapActionProvider provider;
     private TiredBehaviour tiredBehaviour;
