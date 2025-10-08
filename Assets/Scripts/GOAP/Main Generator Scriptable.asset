@@ -36,6 +36,11 @@ MonoBehaviour:
       <Path>k__BackingField: Assets/Scripts/GOAP/Patient/Goals/GetCuredGoal.cs
       <Id>k__BackingField: GetCured-77185614-1603-4815-96e4-84c837d0a4f1
     actions:
+    - <Name>k__BackingField: FetchPatientAction
+      fullName: GOAP.FetchPatientAction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/Nurse/Actions/FetchPatientAction.cs
+      <Id>k__BackingField: FetchPatientAction
     - <Name>k__BackingField: RestingAction
       fullName: GOAP.RestingAction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -149,6 +154,11 @@ MonoBehaviour:
       <Path>k__BackingField: Assets/Scripts/GOAP/Patient/WorldKeys/IsRegisteredWorldKey.cs
       <Id>k__BackingField: IsRegisteredWorldKey-a93c318d-29cd-4d3f-97c6-3c178d72e1e8
     targetSensors:
+    - <Name>k__BackingField: PatientTargetSensor
+      fullName: GOAP.PatientTargetSensor, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/Nurse/Sensors/PatientTargetSensor.cs
+      <Id>k__BackingField: PatientTargetSensor
     - <Name>k__BackingField: RestroomTargetSensor
       fullName: GOAP.RestroomTargetSensor, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -170,6 +180,11 @@ MonoBehaviour:
       <Path>k__BackingField: Assets/Scripts/GOAP/Patient/Sensors/WaitingRoomLocalTargetSensor.cs
       <Id>k__BackingField: WaitingRoomLocalTargetSensor
     targetKeys:
+    - <Name>k__BackingField: PatientTargetKey
+      fullName: GOAP.PatientTargetKey, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/Nurse/TargetKeys/PatientTargetKey.cs
+      <Id>k__BackingField: PatientTargetKey
     - <Name>k__BackingField: RestRoomTargetKey
       fullName: GOAP.RestRoomTargetKey, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null

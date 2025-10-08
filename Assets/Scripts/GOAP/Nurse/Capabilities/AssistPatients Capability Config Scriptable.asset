@@ -21,9 +21,34 @@ MonoBehaviour:
     - worldKey:
         <Name>k__BackingField: AnyPatientsWorldKey
         <Id>k__BackingField: AnyPatientsWorldKey
+      comparison: 1
+      amount: 0
+  actions:
+  - action:
+      <Name>k__BackingField: FetchPatientAction
+      <Id>k__BackingField: FetchPatientAction
+    target:
+      <Name>k__BackingField: PatientTargetKey
+      <Id>k__BackingField: PatientTargetKey
+    properties:
+      rid: 3157395167799673019
+    baseCost: 1
+    stoppingDistance: 1
+    validateTarget: 1
+    requiresTarget: 1
+    validateConditions: 1
+    moveMode: 0
+    conditions:
+    - worldKey:
+        <Name>k__BackingField: AnyPatientsWorldKey
+        <Id>k__BackingField: AnyPatientsWorldKey
       comparison: 2
       amount: 0
-  actions: []
+    effects:
+    - worldKey:
+        <Name>k__BackingField: AnyPatientsWorldKey
+        <Id>k__BackingField: AnyPatientsWorldKey
+      effect: 0
   worldSensors:
   - sensor:
       <Name>k__BackingField: AnyPatientsWorldSensor
@@ -31,9 +56,18 @@ MonoBehaviour:
     worldKey:
       <Name>k__BackingField: AnyPatientsWorldKey
       <Id>k__BackingField: AnyPatientsWorldKey
-  targetSensors: []
+  targetSensors:
+  - sensor:
+      <Name>k__BackingField: PatientTargetSensor
+      <Id>k__BackingField: PatientTargetSensor
+    targetKey:
+      <Name>k__BackingField: PatientTargetKey
+      <Id>k__BackingField: PatientTargetKey
   multiSensors: []
   generatorScriptable: {fileID: 11400000, guid: e427c52e6a18f054496544edaa9da965, type: 2}
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 3157395167799673019
+      type: {class: EmptyActionProperties, ns: CrashKonijn.Agent.Runtime, asm: CrashKonijn.Agent.Runtime}
+      data: 

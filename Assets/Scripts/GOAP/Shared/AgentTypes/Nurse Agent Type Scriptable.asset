@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Nurse Agent Type Scriptable
   m_EditorClassIdentifier: 
   capabilities:
-  - {fileID: 11400000, guid: fabad8a258f9dc74ca97e5301bf5ae03, type: 2}
   - {fileID: 11400000, guid: 529be6c8b078d1d4f85e862fa409ebf6, type: 2}
+  - {fileID: 11400000, guid: 5c2a813d98a4b544e87c9193a0002cb9, type: 2}

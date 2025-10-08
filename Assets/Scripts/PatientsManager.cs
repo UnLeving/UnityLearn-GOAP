@@ -29,7 +29,7 @@ namespace GOAP
             
             spawnPoint = GameObject.FindGameObjectWithTag(spawnPointTag).transform;
 
-            RegisterAllExistencePatients();
+            //RegisterAllExistencePatients();
         }
 
         private void RegisterAllExistencePatients()
@@ -51,12 +51,13 @@ namespace GOAP
             }
         }
 
-        private void AddPatient(Patient patient)
+        // todo: add patient when come to waiting room?
+        public void AddPatient(Patient patient)
         {
             patientsQueue.Enqueue(patient);
         }
 
-        public Patient GetAndDeletePatient()
+        public Patient GetPatient()
         {
             return HasPatients() ? patientsQueue.Dequeue() : null;
         }

@@ -12,14 +12,20 @@ namespace GOAP
         {
             data.MedicalCardBehaviour.waitingNurse = true;
             
+            PatientsManager.Instance.AddPatient(data.Patient);
+            
             return ActionRunState.Completed;
         }
 
         public class Data : IActionData
         {
             public ITarget Target { get; set; }
+            
             [GetComponent]
             public MedicalCardBehaviour MedicalCardBehaviour { get; set; }
+            
+            [GetComponent]
+            public Patient Patient { get; set; }
         }
     }
 }

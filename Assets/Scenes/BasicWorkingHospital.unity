@@ -2439,6 +2439,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nurse
       objectReference: {fileID: 0}
+    - target: {fileID: 4051892899030586783, guid: 51e437be22296b340954bf6591a60065, type: 3}
+      propertyPath: pauseTired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8614575130025692626, guid: 51e437be22296b340954bf6591a60065, type: 3}
       propertyPath: <AgentTypeBehaviour>k__BackingField
       value: 
@@ -4728,7 +4732,7 @@ PrefabInstance:
       objectReference: {fileID: 850891866}
     - target: {fileID: 7880970886039044016, guid: d36c43225f9391e4c8810c98eb7ef85e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.7
+      value: -19.6
       objectReference: {fileID: 0}
     - target: {fileID: 7880970886039044016, guid: d36c43225f9391e4c8810c98eb7ef85e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4736,7 +4740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7880970886039044016, guid: d36c43225f9391e4c8810c98eb7ef85e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -65.6
+      value: -37.1
       objectReference: {fileID: 0}
     - target: {fileID: 7880970886039044016, guid: d36c43225f9391e4c8810c98eb7ef85e, type: 3}
       propertyPath: m_LocalRotation.w

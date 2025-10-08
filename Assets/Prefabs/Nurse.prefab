@@ -1079,6 +1079,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 177407082141715887}
+  - component: {fileID: 2890049427594357043}
   - component: {fileID: 5330693530246384018}
   - component: {fileID: 8614575130025692626}
   - component: {fileID: 2393252940483510668}
@@ -1109,6 +1110,19 @@ Transform:
   - {fileID: 153113464759344507}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2890049427594357043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2618188073631541129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc3574cad99546f4b394618a671a5c33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HasPatient: 0
 --- !u!195 &5330693530246384018
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1214,6 +1228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b28c8560fb0957f46bfe5d5ab5ecc7d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseTired: 0
   value: 50
   AtRestroom: 0
 --- !u!1 &2629889911763255196

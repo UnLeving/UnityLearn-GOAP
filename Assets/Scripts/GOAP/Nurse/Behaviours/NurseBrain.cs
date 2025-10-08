@@ -1,4 +1,3 @@
-using System;
 using CrashKonijn.Goap.Core;
 using CrashKonijn.Goap.Runtime;
 using GOAP;
@@ -20,7 +19,9 @@ public class NurseBrain : MonoBehaviour
         this.provider.Events.OnNoActionFound += this.OnNoActionFound;
         this.provider.Events.OnGoalCompleted += this.OnGoalCompleted;
         
-        this.provider.RequestGoal<WanderGoal>(true);
+        //RequestWanderGoal();
+
+        RequestAssistPatientGoal();
     }
 
     private void OnDestroy()
@@ -29,23 +30,40 @@ public class NurseBrain : MonoBehaviour
         this.provider.Events.OnGoalCompleted -= this.OnGoalCompleted;
     }
     
-    private void OnNoActionFound(IGoalRequest request)
+    private void RequestWanderGoal()
     {
         this.provider.RequestGoal<WanderGoal>(true);
     }
     
+    private void RequestAssistPatientGoal()
+    {
+        this.provider.RequestGoal<AssistPatientsGoal>(true);
+    }
+    
+    private void RequestFixTiredGoal()
+    {
+        this.provider.RequestGoal<FixTiredGoal>(true);
+    }
+    
+    private void OnNoActionFound(IGoalRequest request)
+    {
+        //RequestWanderGoal();
+    }
+    
     private void OnGoalCompleted(IGoal goal)
     {
-        this.provider.RequestGoal<WanderGoal>(true);
+        //RequestWanderGoal();
     }
 
     private void Update()
     {
         if (this.tiredBehaviour.IsTired)
         {
-            this.provider.RequestGoal<FixTiredGoal>(true);
+            RequestFixTiredGoal();
         }
         else
-            this.provider.RequestGoal<WanderGoal>(true);
+        {
+            //RequestWanderGoal();
+        }
     }
 }

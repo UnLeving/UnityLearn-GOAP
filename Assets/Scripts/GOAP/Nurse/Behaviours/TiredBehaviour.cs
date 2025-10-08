@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class TiredBehaviour : MonoBehaviour
 {
+    [SerializeField] private bool pauseTired;
+    
     private GoapActionProvider actionProvider;
     public float value = 50;
     public bool IsTired => this.value >= 100;
@@ -18,6 +20,8 @@ public class TiredBehaviour : MonoBehaviour
     {
         if (this.actionProvider.Receiver.IsPaused)
             return;
+        
+        if(pauseTired) return;
 
         this.value += Time.fixedDeltaTime * 2f;
     }
