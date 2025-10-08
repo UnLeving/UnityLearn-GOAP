@@ -15,6 +15,11 @@ MonoBehaviour:
   nameSpace: GOAP
   scripts:
     goals:
+    - <Name>k__BackingField: AssistPatientsGoal
+      fullName: GOAP.AssistPatientsGoal, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/Nurse/Goals/AssistPatientsGoal.cs
+      <Id>k__BackingField: AssistPatientsGoal
     - <Name>k__BackingField: FixTiredGoal
       fullName: GOAP.FixTiredGoal, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -26,16 +31,11 @@ MonoBehaviour:
       <Path>k__BackingField: Assets/Scripts/GOAP/Nurse/Goals/WanderGoal.cs
       <Id>k__BackingField: Wander-df07b15f-a4be-4983-a124-5e167476e3d7
     - <Name>k__BackingField: GetCuredGoal
-      fullName: GOAP.Patient.GetCuredGoal, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      fullName: GOAP.GetCuredGoal, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       <Path>k__BackingField: Assets/Scripts/GOAP/Patient/Goals/GetCuredGoal.cs
       <Id>k__BackingField: GetCured-77185614-1603-4815-96e4-84c837d0a4f1
     actions:
-    - <Name>k__BackingField: GoToRestroomAction
-      fullName: GOAP.GoToRestroomAction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      <Path>k__BackingField: Assets/Scripts/GOAP/Nurse/Actions/GoToRestroomAction.cs
-      <Id>k__BackingField: GoToRestroom-d91a1031-05cd-4847-90c0-88d8e80daec8
     - <Name>k__BackingField: RestingAction
       fullName: GOAP.RestingAction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -61,16 +61,6 @@ MonoBehaviour:
         PublicKeyToken=null
       <Path>k__BackingField: Assets/Scripts/GOAP/Patient/Actions/GoHomeAction.cs
       <Id>k__BackingField: GoHomeAction
-    - <Name>k__BackingField: GoToRegistrationAction
-      fullName: GOAP.GoToRegistrationAction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      <Path>k__BackingField: Assets/Scripts/GOAP/Patient/Actions/GoToRegistrationAction.cs
-      <Id>k__BackingField: GoToRegistrationAction
-    - <Name>k__BackingField: GoToWaitingRoomAction
-      fullName: GOAP.GoToWaitingRoomAction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      <Path>k__BackingField: Assets/Scripts/GOAP/Patient/Actions/GoToWaitingRoomAction.cs
-      <Id>k__BackingField: GoToWaitingRoomAction
     - <Name>k__BackingField: RegisterAction
       fullName: GOAP.RegisterAction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -81,7 +71,17 @@ MonoBehaviour:
         PublicKeyToken=null
       <Path>k__BackingField: Assets/Scripts/GOAP/Patient/Actions/WaitForNurseAction.cs
       <Id>k__BackingField: WaitForNurseAction
+    - <Name>k__BackingField: WaitingRoomAction
+      fullName: GOAP.WaitingRoomAction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/Patient/Actions/WaitingRoomAction.cs
+      <Id>k__BackingField: WaitingRoomAction
     worldSensors:
+    - <Name>k__BackingField: AnyPatientsWorldSensor
+      fullName: GOAP.AnyPatientsWorldSensor, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/Nurse/Sensors/AnyPatientsWorldSensor.cs
+      <Id>k__BackingField: AnyPatientsWorldSensor
     - <Name>k__BackingField: AtRestroomWorldSensor
       fullName: GOAP.AtRestroomWorldSensor, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -97,7 +97,17 @@ MonoBehaviour:
         PublicKeyToken=null
       <Path>k__BackingField: Assets/Scripts/GOAP/Patient/Sensors/RegisteringWorldSensor.cs
       <Id>k__BackingField: RegisteringWorldSensor
+    - <Name>k__BackingField: WaitingNurseWorldSensor
+      fullName: GOAP.WaitingNurseWorldSensor, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/Patient/Sensors/WaitingNurseWorldSensor.cs
+      <Id>k__BackingField: WaitingNurseWorldSensor
     worldKeys:
+    - <Name>k__BackingField: AnyPatientsWorldKey
+      fullName: GOAP.AnyPatientsWorldKey, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/Nurse/WorldKeys/AnyPatientsWorldKey.cs
+      <Id>k__BackingField: AnyPatientsWorldKey
     - <Name>k__BackingField: IsAtRestRoomWorldKey
       fullName: GOAP.IsAtRestRoomWorldKey, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -113,19 +123,9 @@ MonoBehaviour:
         PublicKeyToken=null
       <Path>k__BackingField: Assets/Scripts/GOAP/Nurse/WorldKeys/WanderWorldKey.cs
       <Id>k__BackingField: WanderWorldKey-41863b58-f7ad-4283-a3dc-e2141d8c85a8
-    - <Name>k__BackingField: AtEntranceWorldKey
-      fullName: GOAP.Patient.AtEntranceWorldKey, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      <Path>k__BackingField: Assets/Scripts/GOAP/Patient/WorldKeys/AtEntranceWorldKey.cs
-      <Id>k__BackingField: AtEntranceWorldKey-0fe2eb68-0fb6-4cf3-8f50-d5565df58da3
-    - <Name>k__BackingField: AtRegistrationWorldKey
-      fullName: GOAP.Patient.AtRegistrationWorldKey, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      <Path>k__BackingField: Assets/Scripts/GOAP/Patient/WorldKeys/AtRegistrationWorldKey.cs
-      <Id>k__BackingField: AtRegistrationWorldKey-09f178e4-3e80-420e-ae96-294d335a4743
     - <Name>k__BackingField: InWaitingRoomWorldKey
-      fullName: GOAP.Patient.InWaitingRoomWorldKey, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      fullName: GOAP.InWaitingRoomWorldKey, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       <Path>k__BackingField: Assets/Scripts/GOAP/Patient/WorldKeys/InWaitingRoomWorldKey.cs
       <Id>k__BackingField: InWaitingRoomWorldKey-0b87712f-739f-437a-93a2-771a31af03dd
     - <Name>k__BackingField: IsCuredWorldKey
@@ -134,26 +134,21 @@ MonoBehaviour:
       <Path>k__BackingField: Assets/Scripts/GOAP/Patient/WorldKeys/IsCuredWorldKey.cs
       <Id>k__BackingField: IsCuredWorldKey
     - <Name>k__BackingField: IsFollowingNurseWorldKey
-      fullName: GOAP.Patient.IsFollowingNurseWorldKey, Assembly-CSharp, Version=0.0.0.0,
+      fullName: GOAP.IsFollowingNurseWorldKey, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       <Path>k__BackingField: Assets/Scripts/GOAP/Patient/WorldKeys/IsFollowingNurseWorldKey.cs
       <Id>k__BackingField: IsFollowingNurseWorldKey-91cb51bd-4b8b-4222-84bd-db5ebd3cebb4
     - <Name>k__BackingField: IsHomeWorldKey
-      fullName: GOAP.Patient.IsHomeWorldKey, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      fullName: GOAP.IsHomeWorldKey, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       <Path>k__BackingField: Assets/Scripts/GOAP/Patient/WorldKeys/IsHomeWorldKey.cs
       <Id>k__BackingField: IsHomeWorldKey-d5fa54dd-f671-43c6-8e77-032a86e87159
     - <Name>k__BackingField: IsRegisteredWorldKey
-      fullName: GOAP.Patient.IsRegisteredWorldKey, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      fullName: GOAP.IsRegisteredWorldKey, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       <Path>k__BackingField: Assets/Scripts/GOAP/Patient/WorldKeys/IsRegisteredWorldKey.cs
       <Id>k__BackingField: IsRegisteredWorldKey-a93c318d-29cd-4d3f-97c6-3c178d72e1e8
     targetSensors:
-    - <Name>k__BackingField: AgentSensor
-      fullName: GOAP.AgentSensor, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      <Path>k__BackingField: Assets/Scripts/GOAP/Nurse/Sensors/AgentSensor.cs
-      <Id>k__BackingField: AgentSensor
     - <Name>k__BackingField: RestroomTargetSensor
       fullName: GOAP.RestroomTargetSensor, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -169,12 +164,12 @@ MonoBehaviour:
         PublicKeyToken=null
       <Path>k__BackingField: Assets/Scripts/GOAP/Patient/Sensors/RegistrationZoneSensor.cs
       <Id>k__BackingField: RegistrationZoneSensor
+    - <Name>k__BackingField: WaitingRoomLocalTargetSensor
+      fullName: GOAP.WaitingRoomLocalTargetSensor, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      <Path>k__BackingField: Assets/Scripts/GOAP/Patient/Sensors/WaitingRoomLocalTargetSensor.cs
+      <Id>k__BackingField: WaitingRoomLocalTargetSensor
     targetKeys:
-    - <Name>k__BackingField: AgentTarget
-      fullName: GOAP.AgentTarget, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      <Path>k__BackingField: Assets/Scripts/GOAP/Nurse/TargetKeys/AgentTarget.cs
-      <Id>k__BackingField: AgentTarget-425903d7-8429-4cb6-b3ce-76d1a541a2b6
     - <Name>k__BackingField: RestRoomTargetKey
       fullName: GOAP.RestRoomTargetKey, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -186,28 +181,23 @@ MonoBehaviour:
       <Path>k__BackingField: Assets/Scripts/GOAP/Nurse/TargetKeys/WanderTargetKey.cs
       <Id>k__BackingField: WanderTargetKey-3bbaa7e5-f257-4fe2-b379-76ef6ef59d42
     - <Name>k__BackingField: HomeTargetKey
-      fullName: GOAP.Patient.HomeTargetKey, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      fullName: GOAP.HomeTargetKey, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       <Path>k__BackingField: Assets/Scripts/GOAP/Patient/TargetKeys/HomeTargetKey.cs
       <Id>k__BackingField: HomeTargetKey-8fe95014-3922-432d-9ac5-b3ae0abdfb34
-    - <Name>k__BackingField: HospitalEntranceTargetKey
-      fullName: GOAP.Patient.HospitalEntranceTargetKey, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      <Path>k__BackingField: Assets/Scripts/GOAP/Patient/TargetKeys/HospitalEntranceTargetKey.cs
-      <Id>k__BackingField: HospitalEntranceTargetKey-4d7c55a2-e560-47f4-82a7-1c6020d65476
     - <Name>k__BackingField: NurseTargetKey
-      fullName: GOAP.Patient.NurseTargetKey, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      fullName: GOAP.NurseTargetKey, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       <Path>k__BackingField: Assets/Scripts/GOAP/Patient/TargetKeys/NurseTargetKey.cs
       <Id>k__BackingField: NurseTargetKey-8697ae1d-c75b-4187-b2ce-97a4ec16536e
     - <Name>k__BackingField: RegistrationDeskTargetKey
-      fullName: GOAP.Patient.RegistrationDeskTargetKey, Assembly-CSharp, Version=0.0.0.0,
+      fullName: GOAP.RegistrationDeskTargetKey, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       <Path>k__BackingField: Assets/Scripts/GOAP/Patient/TargetKeys/RegistrationDeskTargetKey.cs
       <Id>k__BackingField: RegistrationDeskTargetKey-e74180e3-87bb-479d-ad5a-78f5f363d5eb
     - <Name>k__BackingField: WaitingRoomTargetKey
-      fullName: GOAP.Patient.WaitingRoomTargetKey, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      fullName: GOAP.WaitingRoomTargetKey, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       <Path>k__BackingField: Assets/Scripts/GOAP/Patient/TargetKeys/WaitingRoomTargetKey.cs
       <Id>k__BackingField: WaitingRoomTargetKey-127d031a-69dd-4b27-8023-1fa8f2687a2e
     multiSensors: []

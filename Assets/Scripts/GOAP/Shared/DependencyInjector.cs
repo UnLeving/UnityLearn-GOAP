@@ -8,6 +8,7 @@ namespace GOAP
     public class DependencyInjector : GoapConfigInitializerBase, IGoapInjector
     {
         [field: SerializeField] public PatientConfigSO PatientConfigSo { get; private set; }
+        [field: SerializeField] public NurseConfigSO NurseConfigSo { get; private set; }
     
     
         public override void InitConfig(IGoapConfig config)

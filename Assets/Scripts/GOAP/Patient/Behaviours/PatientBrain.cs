@@ -1,18 +1,20 @@
 using CrashKonijn.Goap.Runtime;
-using GOAP.Patient;
 using UnityEngine;
 
-public class PatientBrain : MonoBehaviour
+namespace GOAP
 {
-    private GoapActionProvider provider;
-
-    private void Awake()
+    public class PatientBrain : MonoBehaviour
     {
-        this.provider = this.GetComponent<GoapActionProvider>();
-    }
+        private GoapActionProvider provider;
 
-    private void Start()
-    {
-        this.provider.RequestGoal<GetCuredGoal>(true);
+        private void Awake()
+        {
+            this.provider = this.GetComponent<GoapActionProvider>();
+        }
+
+        private void Start()
+        {
+            this.provider.RequestGoal<GetCuredGoal>(true);
+        }
     }
 }
